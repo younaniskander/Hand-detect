@@ -16,9 +16,19 @@ model = load_pretrained_model()
 
 # Function to process image and make predictions
 def predict(image):
-    # Preprocess the image
+    processed_image = preprocess_image(image)
+
     # Make predictions using the pre-trained model
-    # Return the predicted class (right or left hand)
+    # Replace this with your actual prediction code using the loaded model
+    # For example, if you have a classification model, you might do:
+    # prediction = model.predict(processed_image)
+    # If the model outputs probabilities, you might need to extract the class with the highest probability
+    # predicted_class = np.argmax(prediction)
+
+    # For now, let's return a placeholder prediction
+    predicted_class = "Right Hand"  # Placeholder prediction
+
+    return predicted_class
 
 # File uploader
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
